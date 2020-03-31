@@ -2502,6 +2502,7 @@ KPluginMetaData DocumentPrivate::generatorForMimeType(const QMimeType& type, QWi
 
 Document::OpenResult Document::openDocument(const QString & docFile, const QUrl &url, const QMimeType &_mime, const QString & password )
 {
+    qDebug() << " Current URL : " << url;
     QMimeDatabase db;
     QMimeType mime = _mime;
     QByteArray filedata;

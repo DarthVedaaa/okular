@@ -1060,7 +1060,7 @@ QImage PDFGenerator::image( Okular::PixmapRequest * request )
 
     // compute dpi used to get an image with desired width and height
     Okular::Page * page = request->page();
-
+    qDebug() << " Current page number : " << page->number();
     double pageWidth = page->width(),
            pageHeight = page->height();
 
