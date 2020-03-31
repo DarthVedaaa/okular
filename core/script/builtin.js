@@ -130,6 +130,22 @@ function AFNumber_Format( nDec, sepStyle, negStyle, currStyle, strCurrency, bCur
     event.value = ret;
 }
 
+function AFNumber_Keystroke(nDec, sepStyle, negStyle, currStyle, strCurrency, bCurrencyPrepend)
+{
+    // TODO
+    return;
+}
+
+function AFMakeNumber(string)
+{
+    var type = typeof string;
+    if ( type == "number" )
+        return string;
+    if ( type != "string" )
+        return 0;
+    return util.stringToNumber( string );
+}
+
 /** AFTime_Format
  *
  * Formats event.value based on parameters.
